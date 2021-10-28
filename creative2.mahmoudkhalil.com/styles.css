@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/a.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+.intro{
+  text-align: center;
+}
+
+.Options{
+  display: flex;
+  margin-top: 40px;
+}
+
+#cryto_options{
+  margin-left: 20px;
+}
+
+#buttonClick{
+  margin-left: 20px;
+  padding: 10px;
+  background-color: #C5B358;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.Kanye{
+  display: flex;
+
+}
+
+.item{
+  text-align: center;
+  align-items: center;
+  margin-left: 20px auto;
+
+}
+
+.MainCrypto{
+  margin: 20px;
+}
+
+#Crypto{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(black, 0.25);
+  width: 350px;
+  margin: 0 auto;
+  background-color:black;
+  opacity:0.92;
+}
+
+.data{
+  margin: 10px;
+}
+
+.image_crypto img{
+  width: 100px;
+  height: 100px;
+}
+
+.item p{
+  padding-top: 80px;
+  font-size: 25px;
+
+
+}
+.Kanye img{
+  width : 280px;
+  height: 500px;
+  margin:30px;
+  filter: brightness(50%);
+  border-radius: 200px;
+}
+
+.footer {
+  margin-top: 10px;
+  position: relative;
+  padding: 10px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
