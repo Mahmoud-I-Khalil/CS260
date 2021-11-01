@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <title>XKCD Browser</title>
+</head>
+
+<body>
+  <h1>XKCD Browser</h1>
+  <div id="app">
+    <div v-if="loading">
+      <p>Loading...</p>
+    </div>
+    <div v-else>
+
+      <p>
+        <button v-on:click="oldestComic">oldestComic</button>
+        <button v-on:click="previousComic">Previous</button>
+        <button v-on:click="randomComic">Random</button>
+        <button v-on:click="nextComic">Next</button>
+        <button v-on:click="latestComic">lastestComic</button>
+      </p>
+
+      <h2>{{current.safe_title}}</h2>
+      <img v-bind:src="current.img" v-bind:alt="current.alt">
+      <p>{{current.alt}}</p>
+      <p><i>#{{current.num}}, drawn on {{current.month}}-{{current.day}}-{{current.year}}</i></p>
+
+      <h3>Add a Comment</h3>
+      <form v-on:submit.prevent="addComment">
+        <star-rating v-bind:increment="0.5"
+             active-color="red"
+             @rating-selected ="rateComment" v-model="starsCount"></star-rating>
+        <input v-model="addedName" placeholder="Name"></p>
+        <textarea v-model="addedComment"></textarea>
+        <br />
+        <button type="submit">Comment</button>
+      </form>
+      <div class="">
+        <h3>AVERAGE RATING:</h3>
+        <star-rating v-bind:increment="0.02" :read-only='true' :rating='totalRating()' v-bind:star-size="20"></star-rating>
+      </div>
+      <h3>Comments</h3>
+      <div v-for="comment in comments[number]">
+        <hr>
+        <star-rating v-bind:increment="0.5" :read-only='true' :rating='comment.rating' v-bind:star-size="20"></star-rating>
+        <p>Date: {{comment.dateP}}</p>
+        <p>"{{comment.text}}"</p>
+        <p><i>-- {{comment.author}}</i></p>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <a href="https://github.com/Mahmoud-I-Khalil/CS260/tree/main/creative2.mahmoudkhalil.com" target="_blank">Github Link </a>
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/vue-star-rating/dist/VueStarRating.umd.min.js"></script>`
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
