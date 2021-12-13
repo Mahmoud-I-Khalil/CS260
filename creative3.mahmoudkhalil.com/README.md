@@ -6,4 +6,4 @@ with:
 ```
 npm install
 npm run serve
-```at starts with `product`, such as `product/10` or `product/14`. In our case the `:id` will be an integer, but it can also match strings.
+```
